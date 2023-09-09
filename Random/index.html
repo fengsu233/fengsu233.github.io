@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机点名</title>
+    <style>
+        body{
+   		 background:url(https://telegraph-image-ds7.pages.dev/file/af79570968c5357b28b25.png) no-repeat center top;
+   		 background-size:cover;
+   		 background-attachment:fixed;
+		}
+            
+
+
+
+        
+        #content{
+            border-radius: 25px;
+            width: 600px;
+            height: 400px;
+            background: rgb(198, 194, 194);
+            margin: 100px auto;
+            text-align: center;
+            position: relative;
+            line-height: 300px;
+            color: blueviolet;
+            font-size: 70px;
+            opacity:0.5;
+        }   
+        #btn1{
+            background: #ccc;
+            width: 180px;
+            height: 80px;
+            font-size: 30px;
+            color: #f40;
+            border-radius: 12px;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            margin-left: -90px;
+            
+            
+        }
+    
+    </style>
+</head>
+<body >
+    <div id="content">
+        <span id="span1">
+            点击开始,进行抽取
+        </span>
+        <button id="btn1">
+            start
+        </button>
+
+    </div>
+
+    <script>
+        var arr = [ '曾杰林' ,'代钰淇' ,'黄海文', '梁清豪' ,'罗俊贤', '温建辉','曾巧怡','陈丽敏','曾俊忠','方有圆','黄锦桢','刘永彦','罗慰杰','严智星','曾铱诺','陈勉改',
+        '程钰蝉','高钉钎','黎婉晴','卢子曼','罗欣炎','丘耀瞳','李晓钰','卢紫欣','罗紫晴','苏琦惠','陈家麒','陈锦轩','官文睿','黄宇鑫','何文锁','江展帆','刘宇轩','刘志明',
+        '潘治国','王岩','颜艳华','朱卓昊','陈宝怡','陈浩榆','陈秀铃','陈颜','黄海晴','江嘉怡','梁欢欢','梁倩茹','陆裕琪','欧学文','罗婷婷','丘锐怡','温金倩','张盈盈','郑楚韵'
+        ,'郑美琳','钟欣亭','周咏仪'];
+        var $btn1 = document.getElementById('btn1');
+        var $content = document.getElementById('content');
+        var $span1 = document.getElementById('span1');
+        var timer;//计时器
+        var testNum = true;
+        $btn1.onclick = function(){
+            if(testNum){
+                // console.log(1);
+                start();
+                $btn1.innerHTML = 'stop';
+                testNum = false;
+            }
+            else{
+                // console.log(0);
+                stop();
+                $btn1.innerHTML = 'start';
+                testNum = true;
+            }
+        }
+        function start(){
+                timer = setInterval(function(){
+                    var num = random(0,arr.length - 1);
+                    $span1.innerHTML = arr[num];
+                },70)
+        }
+        function stop(){
+                clearInterval(timer);      
+        }
+        // 随机函数
+        function random(a,b){
+            var randomNum = Math.round(Math.random() * (b - a) + a);
+            return randomNum;
+        }        
+    </script>
+</body>
+</html>
+
