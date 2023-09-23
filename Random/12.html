@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>随机点名</title>
     <style>
-        #btn2box{
+        /* #btn2box{
             top: 10px;
             border-radius: 10px;
             width: 200px;
@@ -36,11 +36,11 @@
             padding: 10px 20px
 
 
-        }
+        } */
         
 
         body{
-   		 background:url(https://telegraph-image-ds7.pages.dev/file/af79570968c5357b28b25.png) no-repeat center top;
+   		 background:url(https://telegraph-image-ds7.pages.dev/file/bbf80279fa631bdb7c070.jpg) no-repeat center top;
    		 background-size:cover;
    		 background-attachment:fixed;
 		}
@@ -76,34 +76,57 @@
             
             
         }
+
+        #mybox{
+            opacity:0.8;
+            background: #ccc;
+            text-align: center;
+            width: 180px;
+            height: 45px;
+            font-size: 25px;
+            color:  rgb(255, 255, 255);
+            border-radius: 12px;
+            position: absolute;
+            left: 50%;
+            margin-left: -90px;
+
+
+
+
+
+
+
+
+        }
     
     </style>
 </head>
 <body >
-    <a href="/Random/12.html">
+    <!-- <a href="/Random/12.html">
     <div id="btn2box">
     <button id="btn2" style="color: rgb(247, 6, 6);">【12班】</button>
     </div>
-    </a>
+    </a> -->
 
     <div id="content">
         <span id="span1">
             点击开始,进行抽取
         </span>
         <button id="btn1">
-            start
+            开始
         </button>
 
     </div>
    
-    
+    <div id="mybox">by 13班
+        /<a href="https://fengsu233.github.io/">轩</a></div>
 
     <script>
-        var arr = [ '曾杰林','曾俊忠','曾巧怡','曾铱诺','陈宝怡','陈浩榆','陈家麒','陈锦轩','陈丽敏','陈勉改','陈秀铃','陈颜','程钰蝉','代钰淇',
-        '方有圆','高钎钎','官文睿','何文钡','黄海晴','黄海文','黄锦桢','黄宇鑫','江嘉怡','江展帆',
-        '黎婉睛','李晓钰','梁欢欢','梁倩茹','梁清豪','刘永彦','刘宇轩','刘志明','卢子曼','卢紫欣','陆裕琪','罗俊贤','罗婷婷','罗慰杰','罗欣炎',
-        '罗紫晴','欧学文','潘治国','丘锐怡','丘耀曈','苏琦惠','王岩','温建辉','温金倩','严智星','颜艳华','张盈盈','郑楚韵','郑美琳','钟欣亭',
-        '周咏仪','朱卓昊'];       var $btn1 = document.getElementById('btn1');
+        var arr = [ '钟常乐','谢晓欣','胡慧君','叶铭伟','何思予','杨恒星','袁俊健','温悠游','莫碧彤','简俊杰','陈江文','李家俊','榻亮天','温曼钰',
+        '何铭泽','张碧儿','陈茹婷','邓金毅','成晓婷','何昱杰','温可瑶','成璟豪','杨子慧','郑洋','王佳','刘颖','梁成熙','曾君瑜','榻俊延','黄嘉蓥',
+        '陈传飞','陈碧妍','何秀青','陈科历','邓远轩','李墁婷','冯嘉诚','梁妍玲','郑晓榆','欧智锋'
+,'赖嘉琪','罗俊铧','梁心怡','黄镇宝','李依纯','林家琪','陈文泽','蓝岚','黄敬烨','潘慰','何文轩','黄晶莹','黄颖芝'];      
+ var $btn1 = document.getElementById('btn1');
         var $content = document.getElementById('content');
         var $span1 = document.getElementById('span1');
         var timer;//计时器
